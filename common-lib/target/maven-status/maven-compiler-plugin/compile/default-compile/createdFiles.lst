@@ -1,0 +1,5 @@
+com\simulator\common\model\PriceUpdate.class
+com\simulator\common\model\Trade.class
+com\simulator\common\model\Order.class
+com\simulator\common\enums\OrderType.class
+com\simulator\common\enums\StockSymbol.class
