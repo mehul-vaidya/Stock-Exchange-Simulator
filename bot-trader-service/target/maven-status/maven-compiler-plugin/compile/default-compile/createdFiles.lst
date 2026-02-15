@@ -1,3 +1,2 @@
-com\App.class
-com\simulator\bot\BotTraderApplication.class
 com\simulator\bot\service\BotTrader.class
+com\simulator\bot\BotTraderApplication.class

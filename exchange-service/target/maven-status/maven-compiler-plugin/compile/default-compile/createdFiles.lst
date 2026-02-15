@@ -1,6 +1,5 @@
-com\simulator\exchange\engine\MatchingEngine.class
 com\simulator\exchange\service\ExchangeService.class
-com\App.class
+com\simulator\exchange\engine\MatchingEngine.class
 com\simulator\exchange\ExchangeServiceApplication.class
 com\simulator\exchange\config\KafkaTopicConfig.class
 com\simulator\exchange\engine\OrderBook.class

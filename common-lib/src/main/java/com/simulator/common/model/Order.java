@@ -1,5 +1,5 @@
 package com.simulator.common.model;
-
+//below class defines properties of order object and getter/setters
 import com.simulator.common.enums.OrderType;
 import com.simulator.common.enums.StockSymbol;
 

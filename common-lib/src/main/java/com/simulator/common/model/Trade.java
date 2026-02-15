@@ -1,5 +1,6 @@
 package com.simulator.common.model;
-
+//when trade happens. i.e. when stock is sold and bought, we maintain
+//buy order id, sell order id , price , timestamp for that
 import com.simulator.common.enums.StockSymbol;
 
 import java.time.Instant;

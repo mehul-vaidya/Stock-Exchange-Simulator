@@ -18,3 +18,15 @@ Tech stack
 
 ![img.png](img.png)
 
+First start docker application then run below comamand
+docker-compose down -v
+docker-compose up -d
+
+start exchange service using below commandas
+cd exchange-service
+mvn spring-boot:run
+
+start bot trader service using below commandas
+cd bot-trader-service
+mvn spring-boot:run
+

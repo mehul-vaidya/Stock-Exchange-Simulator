@@ -1,5 +1,5 @@
 package com.simulator.common.model;
-
+//this class is used to maintain current price of stock along with timestamp
 import com.simulator.common.enums.StockSymbol;
 
 import java.time.Instant;

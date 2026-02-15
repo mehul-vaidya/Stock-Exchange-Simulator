@@ -1,5 +1,8 @@
 package com.simulator.exchange.engine;
-
+//we maintain buy order queue and sell order queue for each stock
+//if buyer is willing to pay more than what seller is asking then trade happens
+//lets say seller is willing to sale at 10. buyer is ready to buy at 12 then trade happen
+//new stock price will be 10
 import com.simulator.common.model.Order;
 import com.simulator.common.model.Trade;
 import org.slf4j.Logger;
