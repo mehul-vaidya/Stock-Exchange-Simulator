@@ -80,9 +80,9 @@ public class BotTrader {
 
         double price;
         if (type == OrderType.BUY) {
-            price = randomBetween(0.9 * current, current);
+            price = randomBetween(0.9 * current, current*1.05);
         } else {
-            price = randomBetween(current, 1.1 * current);
+            price = randomBetween(0.95* current, 1.1 * current);
         }
 
         // Create order and place it

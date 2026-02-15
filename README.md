@@ -28,5 +28,13 @@ mvn spring-boot:run
 
 start bot trader service using below commandas
 cd bot-trader-service
-mvn spring-boot:run
+mvn clean package
+cd target
+java -jar bot-trader-service-1.0-SNAPSHOT.jar --server.port=8085
+java -jar bot-trader-service-1.0-SNAPSHOT.jar --server.port=8086
+java -jar bot-trader-service-1.0-SNAPSHOT.jar --server.port=8087
+java -jar bot-trader-service-1.0-SNAPSHOT.jar --server.port=8088
 
+
+This project is not completed yet. Main bug is price update sent from exchange is not received
+by bot trader
