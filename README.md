@@ -18,23 +18,39 @@ Tech stack
 
 ![img.png](img.png)
 
-First start docker application then run below comamand
+1.First start docker application then run below comamand
 docker-compose down -v
 docker-compose up -d
 
-start exchange service using below commandas
+2.start exchange service using below commandas
 cd exchange-service
 mvn spring-boot:run
 
-start bot trader service using below commandas
+3.start bot trader service using below commandas
 cd bot-trader-service
-mvn clean package
-cd target
-java -jar bot-trader-service-1.0-SNAPSHOT.jar --server.port=8085
-java -jar bot-trader-service-1.0-SNAPSHOT.jar --server.port=8086
-java -jar bot-trader-service-1.0-SNAPSHOT.jar --server.port=8087
-java -jar bot-trader-service-1.0-SNAPSHOT.jar --server.port=8088
+mvn spring-boot:run
 
+zip file will be created inside target folder
+java -jar target\bot-trader-service-1.0-SNAPSHOT.jar --server.port=8085
+java -jar target\bot-trader-service-1.0-SNAPSHOT.jar --server.port=8086
+java -jar target\bot-trader-service-1.0-SNAPSHOT.jar --server.port=8087
+java -jar target\bot-trader-service-1.0-SNAPSHOT.jar --server.port=8088
 
-This project is not completed yet. Main bug is price update sent from exchange is not received
-by bot trader
+4.start price service
+cd price-service
+mvn spring-boot:run
+
+5.start user service
+cd user-service
+mvn spring-boot:run
+
+to check docker messeages you can use
+docker ps
+kafka-console-consumer --bootstrap-server localhost:9092 --topic price-topic --from-beginning
+enter bash
+docker exec -it <copy service name> bash
+docker exec -it kafka bash
+
+check price topic messeges
+kafka-console-consumer --bootstrap-server localhost:9092 --topic price-topic --from-beginning
+kafka-consumer-groups  --bootstrap-server localhost:9092 --describe --group bot-trader-group

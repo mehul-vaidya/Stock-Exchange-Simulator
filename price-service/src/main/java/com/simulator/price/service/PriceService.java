@@ -33,7 +33,7 @@ public class PriceService {
     public void consume(PriceUpdate update) {
 
         prices.put(update.getStock(), update.getPrice());
-        log.debug("Price updated → {} @ {}", update.getStock(), update.getPrice());
+        log.info("Price update Received → {} @ {}", update.getStock(), update.getPrice());
     }
 
     public Map<StockSymbol, Double> getPrices() {

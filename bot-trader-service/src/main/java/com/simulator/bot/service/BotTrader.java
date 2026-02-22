@@ -56,14 +56,14 @@ public class BotTrader {
     @KafkaListener(topics = "price-topic")
     public void onPriceUpdate(PriceUpdate update) {
         livePrices.put(update.getStock(), update.getPrice());
-        log.debug("Price updated → {} @ {}", update.getStock(), update.getPrice());
+        log.info("Price update Received → {} @ {}", update.getStock(), update.getPrice());
     }
 
     @Scheduled(fixedRateString = "${bot.interval-ms}")
     public void placeOrder() {
 
         // Stop after 10 minutes
-        if (System.currentTimeMillis() - startTime > 10 * 60 * 1000) {
+        if (System.currentTimeMillis() - startTime > 30 * 60 * 1000) {
             log.info("Bot runtime finished. Stopping order generation.");
             return;
         }

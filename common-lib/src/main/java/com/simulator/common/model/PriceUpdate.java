@@ -11,6 +11,7 @@ public class PriceUpdate {
     private Instant timestamp;
 
     public PriceUpdate() {
+
     }
 
     public PriceUpdate(StockSymbol stock, double price) {
