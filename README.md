@@ -13,7 +13,7 @@ There is one stock exchange service running which accepts orders from 4 bot trad
 The bot trader services randomly decide to place buy or sell orders for randomly selected stocks at random prices within specified ranges.
 The user service allows real users to place buy or sell orders for stocks at specified prices.
 
-This report contains backend implementation details using Java, Spring Boot, and Kafka, as well as frontend implementation using Angular for displaying current stock prices and placing orders.
+This repo contains backend implementation details using Java, Spring Boot, and Kafka
 Frontend repo link : https://github.com/mehul-vaidya/Stock-Exchange-UI
 
 Initial requirements and implementation details:
@@ -33,7 +33,7 @@ Initial requirements and implementation details:
 14.  use angular for that.
 
 
-Most Important question how actual trade happens?
+**Most Important question how actual trade happens?**
 we have 4 stocks in our system AA, BB, CC, DD.
 
 For each stock we maintain two priority queues. one for buy orders and one for sell orders.
@@ -49,7 +49,7 @@ If there are multiple sell orders at price 100, we match the buy order with the 
 After a trade is executed, we update the current price of the stock to the price at which the trade was executed (100 in this case) and remove the matched orders from their respective queues.
 
 
-How to run the project:
+**How to run the project:**
 
 1.First start docker application on windows then run below comamand
 docker-compose down -v
