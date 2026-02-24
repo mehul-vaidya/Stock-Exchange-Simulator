@@ -1,5 +1,6 @@
-com\simulator\price\service\PriceService.class
-com\simulator\price\websocket\PriceWebSocketPublisher.class
 com\simulator\price\controller\PriceController.class
 com\simulator\price\PriceServiceApplication.class
+com\simulator\price\config\CorsConfig.class
+com\simulator\price\service\PriceService.class
+com\simulator\price\websocket\PriceWebSocketPublisher.class
 com\simulator\price\config\WebSocketConfig.class

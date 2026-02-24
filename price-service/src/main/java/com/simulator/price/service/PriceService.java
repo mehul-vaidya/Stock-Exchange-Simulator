@@ -29,11 +29,11 @@ public class PriceService {
         prices.put(StockSymbol.DD, 25.0);
     }
 
-    @KafkaListener(topics = "price-topic")
+    @KafkaListener(topics = "price-topic",  groupId = "price-service-group")
     public void consume(PriceUpdate update) {
 
         prices.put(update.getStock(), update.getPrice());
-        log.info("Price update Received → {} @ {}", update.getStock(), update.getPrice());
+        log.info("Price update Received in PriceService→ {} @ {}", update.getStock(), update.getPrice());
     }
 
     public Map<StockSymbol, Double> getPrices() {

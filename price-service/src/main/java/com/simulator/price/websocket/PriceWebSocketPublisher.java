@@ -17,10 +17,10 @@ public class PriceWebSocketPublisher {
         this.template = template;
     }
 
-    @KafkaListener(topics = "price-topic")
+    @KafkaListener(topics = "price-topic" , groupId = "price-websocket-group")
     public void publish(PriceUpdate update) {
 
         template.convertAndSend("/topic/prices", update);
-        log.debug("Price updated → {} @ {}", update.getStock(), update.getPrice());
+        log.info("Price update Received in Webscocket → {} @ {}", update.getStock(), update.getPrice());
     }
 }

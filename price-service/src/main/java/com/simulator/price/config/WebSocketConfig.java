@@ -24,6 +24,6 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     //* Allows any frontend (Angular running on another port) to connect.
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/ws").setAllowedOrigins("*");
+        registry.addEndpoint("/ws").setAllowedOriginPatterns("*").withSockJS();;
     }
 }

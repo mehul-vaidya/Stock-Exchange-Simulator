@@ -1,2 +1,3 @@
+com\simulator\user\config\CorsConfig.class
 com\simulator\user\controller\UserOrderController.class
 com\UserOrderServiceApplication.class
