@@ -50,6 +50,7 @@ After a trade is executed, we update the current price of the stock to the price
 
 
 How to run the project:
+
 1.First start docker application on windows then run below comamand
 docker-compose down -v
 docker-compose up -d
