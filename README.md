@@ -1,3 +1,4 @@
+**About this project **
 In this project we have implemented a stock exchange simulator.
 On this Stock exchange four stocks are tradded. 
 The names and starting rates of these stocks are as follows:    
@@ -16,7 +17,7 @@ The user service allows real users to place buy or sell orders for stocks at spe
 This repo contains backend implementation details using Java, Spring Boot, and Kafka
 Frontend repo link : https://github.com/mehul-vaidya/Stock-Exchange-UI
 
-Initial requirements and implementation details:
+** Initial requirements and implementation details:**
 1.  there will be four stocks that will be traded on this exchange. Their names and starting rate will AA-100 , BB-150, CC-200, DD-25
 2.  there will be 1 stock exchange serivce will be running 
 3.  there will be total 4 services running which will contantly placing buy/sale order. 
@@ -34,19 +35,13 @@ Initial requirements and implementation details:
 
 
 **Most Important question how actual trade happens?**
-we have 4 stocks in our system AA, BB, CC, DD.
-
-For each stock we maintain two priority queues. one for buy orders and one for sell orders.
-
-Buy orders are sorted in descending order of price (highest price first) and sell orders are sorted in ascending order of price (lowest price first).
-
-When a new order is placed, we check if it can be matched with existing orders in the opposite queue. 
-
-For example, if a buy order is placed for stock AA at price 105, we check the sell queue for AA to see if there are any sell orders with price less than or equal to 105. If there is a sell order at price 100, we match the buy order with that sell order and execute the trade at the price of the sell order (100 in this case). 
-
-If there are multiple sell orders at price 100, we match the buy order with the earliest sell order (first come first serve).
-
-After a trade is executed, we update the current price of the stock to the price at which the trade was executed (100 in this case) and remove the matched orders from their respective queues.
+1. we have 4 stocks in our system AA, BB, CC, DD.
+2. For each stock we maintain two priority queues. one for buy orders and one for sell orders.
+3. Buy orders are sorted in descending order of price (highest price first) and sell orders are sorted in ascending order of price (lowest price first).
+4. When a new order is placed, we check if it can be matched with existing orders in the opposite queue. 
+5. For example, if a buy order is placed for stock AA at price 105, we check the sell queue for AA to see if there are any sell orders with price less than or equal to 105. If there is a sell order at price 100, we match the buy order with that sell order and execute the trade at the price of the sell order (100 in this case). 
+6. If there are multiple sell orders at price 100, we match the buy order with the earliest sell order (first come first serve).
+7. After a trade is executed, we update the current price of the stock to the price at which the trade was executed (100 in this case) and remove the matched orders from their respective queues.
 
 
 **How to run the project:**
@@ -80,7 +75,7 @@ mvn spring-boot:run
 6.start frontend. front end is seperate repo. cd inside UI code folder and run below command
 ng serve
 
-other useful commands:
+**other useful commands:**
 
 to check docker messeages you can use
 docker ps
@@ -92,6 +87,8 @@ docker exec -it kafka bash
 check price topic messeges
 kafka-console-consumer --bootstrap-server localhost:9092 --topic price-topic --from-beginning
 kafka-consumer-groups  --bootstrap-server localhost:9092 --describe --group bot-trader-group
+
+**Screenshots**
 
 Before starting any service , we start docker application
 ![img_6.png](img_6.png)
