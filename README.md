@@ -1,4 +1,4 @@
-**About this project **
+**About this project**
 In this project we have implemented a stock exchange simulator.
 On this Stock exchange four stocks are tradded. 
 The names and starting rates of these stocks are as follows:    
@@ -17,7 +17,7 @@ The user service allows real users to place buy or sell orders for stocks at spe
 This repo contains backend implementation details using Java, Spring Boot, and Kafka
 Frontend repo link : https://github.com/mehul-vaidya/Stock-Exchange-UI
 
-** Initial requirements and implementation details:**
+**Initial requirements and implementation details:**
 1.  there will be four stocks that will be traded on this exchange. Their names and starting rate will AA-100 , BB-150, CC-200, DD-25
 2.  there will be 1 stock exchange serivce will be running 
 3.  there will be total 4 services running which will contantly placing buy/sale order. 
